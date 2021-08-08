@@ -10,7 +10,6 @@ class Dimensions extends Component{
 
     render() {
 
-        var me = this;
         return (
             <main className="excel-body">
                 <section className="header">
@@ -22,7 +21,7 @@ class Dimensions extends Component{
                                 evt.preventDefault();
                                 // Code to Report to Analytics 
                                 this.props.submitFn(evt)
-                            }.bind(me)
+                            }.bind(this)
                         }>
                         <div className="align-bottom">{this.props.title}</div>
                         <div className="col">

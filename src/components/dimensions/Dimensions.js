@@ -10,6 +10,7 @@ class Dimensions extends Component{
 
     render() {
 
+        var me = this;
         return (
             <main className="excel-body">
                 <section className="header">

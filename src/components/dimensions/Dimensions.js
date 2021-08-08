@@ -22,7 +22,7 @@ class Dimensions extends Component{
                                 evt.preventDefault();
                                 // Code to Report to Analytics 
                                 this.props.submitFn(evt)
-                            }.bind(me)
+                            }.bind(this)
                         }>
                         <div className="align-bottom">{this.props.title}</div>
                         <div className="col">

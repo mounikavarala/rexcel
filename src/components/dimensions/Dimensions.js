@@ -1,6 +1,7 @@
-import {Component} from 'react'
+import {Component as C1} from 'react'
 
-class Dimensions extends Component{
+
+class Dimensions extends C1 {
 
     constructor(props) {
         super(props);
@@ -10,19 +11,18 @@ class Dimensions extends Component{
 
     render() {
 
-        var me = this;
         return (
+
             <main className="excel-body">
                 <section className="header">
                     <h1>Excel POC</h1>
 
                     <form className="dimensions" id="dimensions" name="dimensions"
-                        onSubmit={
-                            function (evt) {
-                                evt.preventDefault();
+                        onSubmit={function (evt) {
+
                                 // Code to Report to Analytics 
                                 this.props.submitFn(evt)
-                            }.bind(me)
+                            }
                         }>
                         <div className="align-bottom">{this.props.title}</div>
                         <div className="col">
@@ -40,19 +40,12 @@ class Dimensions extends Component{
                     </form>
                 </section>
 
-                <section class="excel">
-                    <div class="formula-bar">
-                        <span> Formula Bar for</span> <span id="cell-in-focus"> Row # , Col #</span> = <span>
-                        <textarea id="formula-text-area"
-                        class="formula-text-area"></textarea></span>
-
-                    </div>
-                    <table class="excel-table" id="book1"></table>
-                </section>
+                {this.props.children}
             </main>
 
         )
     }
 }
 
-export default Dimensions;
+
+export default Dimensions
